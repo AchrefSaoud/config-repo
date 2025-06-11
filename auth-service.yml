@@ -1,0 +1,20 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: auth-service
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/microservices-realm
+
+keycloak:
+  realm: microservices-realm
+  auth-server-url: http://localhost:8080
+  resource: auth-service
+  credentials:
+    secret: your-client-secret
+  use-resource-role-mappings: true
