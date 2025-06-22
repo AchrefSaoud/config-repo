@@ -1,5 +1,5 @@
 server:
-  port: 9000
+  port: 8082
 
 spring:
   application:
@@ -9,11 +9,11 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:8080/realms/microservices-realm
+          issuer-uri: http://keycloak:8080/realms/microservices-realm
 
 keycloak:
   realm: microservices-realm
-  auth-server-url: http://localhost:8080
+  auth-server-url: http://keycloak:8080
   resource: auth-service
   credentials:
     secret: your-client-secret
