@@ -9,12 +9,12 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak:8080/realms/microservices-realm
+          issuer-uri: http://keycloak:8080/realms/eduflex
 
 keycloak:
-  realm: microservices-realm
-  auth-server-url: http://keycloak:8080
-  resource: auth-service
+  realm: eduflex
+  auth-server-url: http://keycloak:8080/
+  resource: eduflex-29051870
   credentials:
-    secret: your-client-secret
+    secret: qh0DFD9VjyXh5KHGbXZTNFMDYhE5xA98
   use-resource-role-mappings: true
