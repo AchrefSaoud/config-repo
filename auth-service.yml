@@ -17,4 +17,6 @@ keycloak:
   resource: eduflex-29051870
   credentials:
     secret: qh0DFD9VjyXh5KHGbXZTNFMDYhE5xA98
+    username: admin
+    password: admin
   use-resource-role-mappings: true
