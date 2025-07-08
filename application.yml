@@ -10,3 +10,8 @@ spring:
   cloud:
     config:
       fail-fast: true
+
+management:
+  metrics:
+    tags:
+      application: ${spring.application.name}

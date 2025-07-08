@@ -26,3 +26,8 @@ spring:
       resource-server:
         jwt:
           issuer-uri: http://keycloak:8080/realms/microservices-realm
+
+management:
+  metrics:
+    tags:
+      application: ${spring.application.name}

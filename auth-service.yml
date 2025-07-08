@@ -20,3 +20,8 @@ keycloak:
     username: admin
     password: admin
   use-resource-role-mappings: true
+
+management:
+  metrics:
+    tags:
+      application: ${spring.application.name}
