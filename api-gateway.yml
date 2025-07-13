@@ -4,28 +4,21 @@ server:
 spring:
   application:
     name: api-gateway
-
   cloud:
     gateway:
       discovery:
         locator:
           enabled: true
           lower-case-service-id: true
-      routes:
-        - id: auth-service
-          uri: lb://auth-service
-          predicates:
-            - Path=/auth/**
-        - id: user-service
-          uri: lb://user-service
-          predicates:
-            - Path=/user/**
-
+    loadbalancer:
+      ribbon:
+        enabled: true
   security:
     oauth2:
-      resource-server:
+      resourceserver:
         jwt:
-          issuer-uri: http://keycloak:8080/realms/microservices-realm
+          issuer-uri: ${KEYCLOAK_ISSUER_URI:http://localhost:8080/auth/realms/master}
+          jwk-set-uri: ${KEYCLOAK_JWKS_URI:http://localhost:8080/auth/realms/master/protocol/openid-connect/certs}
 
 management:
   metrics:
