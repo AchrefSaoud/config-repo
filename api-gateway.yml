@@ -17,8 +17,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://keycloak:8080/realms/master
-          jwk-set-uri: http://keycloak:8080/realms/master/protocol/openid-connect/certs
+          issuer-uri: http://keycloak:8080/realms/eduflex
+          jwk-set-uri: http://keycloak:8080/realms/eduflex/protocol/openid-connect/certs
 
 management:
   metrics:
